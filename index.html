@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+      integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+      integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- for styling -->
+    <style>
+      table {
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      input[type="button"] {
+        width: 100%;
+        padding: 20px 20px;
+        background-color: rgb(20, 163, 7);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+      }
+
+      input[type="text"] {
+        padding: 20px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <!-- create table -->
+
+  <body>
+    <h1>Welcome to awesome calculator</h1>
+    <table id="calcu">
+      <tr>
+        <td colspan="1"><input type="text" id="summand1" /></td>
+        <td><input type="button" value="+" onclick="add()" /></td>
+        <td colspan="1"><input type="text" id="summand2" /></td>
+        <td><input type="button" value="=" onclick="add()" /></td>
+        <td colspan="1"><input type="text" id="result" /></td>
+      </tr>
+    </table>
+
+    <script>
+      var cal = document.getElementById("calcu");
+      cal.onkeyup = function (event) {
+        if (event.keyCode === 13) {
+          console.log("Enter");
+          let x = document.getElementById("result").value;
+          console.log(x);
+          add();
+        }
+      };
+
+      function add() {
+        let summand1 = document.getElementById("summand1").value;
+        let summand2 = document.getElementById("summand2").value;
+        summand1 = Number(summand1);
+        summand2 = Number(summand2);
+        console.log("S1", summand1, "S2", summand2);
+        document.getElementById("result").value = summand1 + summand2;
+      }
+    </script>
+  </body>
+</html>
