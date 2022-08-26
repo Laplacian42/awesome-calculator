@@ -45,7 +45,7 @@
   <!-- create table -->
 
   <body>
-    <h1>Welcome to awesome calculator</h1>
+    <h1>Hallo Raphi</h1>
     <table id="calcu">
       <tr>
         <td colspan="1"><input type="text" id="summand1" /></td>
@@ -54,6 +54,10 @@
         <td><input type="button" value="=" onclick="add()" /></td>
         <td colspan="1"><input type="text" id="result" /></td>
       </tr>
+      <tr>
+        <td colspan="1"><input type="button" value="Löschen" onclick="myclear()" /></td>
+        <td colspan="1"><input type="button" value="Aufgabe erstellen" onclick="aufgabeerstellen()" /></td>
+    </tr>
     </table>
 
     <script>
@@ -66,7 +70,12 @@
           add();
         }
       };
-
+      function myclear() {
+        console.log("Hallo")
+        document.getElementById("result").value=''
+        document.getElementById("summand1").value=''
+        document.getElementById("summand2").value=''
+      }
       function add() {
         let summand1 = document.getElementById("summand1").value;
         let summand2 = document.getElementById("summand2").value;
@@ -75,6 +84,12 @@
         console.log("S1", summand1, "S2", summand2);
         document.getElementById("result").value = summand1 + summand2;
       }
+      function aufgabeerstellen() {
+        document.getElementById("summand1").value = Math.floor(Math.random() * 10);
+        document.getElementById("summand2").value = Math.floor(Math.random() * 10);
+      }
+
+
     </script>
   </body>
 </html>
