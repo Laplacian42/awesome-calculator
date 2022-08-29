@@ -68,10 +68,8 @@ footer {
   }
 }
 
-
-
-      input[type="button"] {
-        width: 100%;
+    .myslimbutton {
+        width: 15%;
         padding: 20px 20px;
         background-color: rgb(243, 240, 73);
         color: rgb(3, 2, 2);
@@ -79,16 +77,31 @@ footer {
         font-weight: bold;
         border: none;
         border-radius: 25px;
-      }
+    }
 
-      input[type="text"] {
+    .myslimtext {
+        width: 20%;
         padding: 20px 30px;
         font-size: 24px;
         font-weight: bold;
         border: none;
         border-radius: 20px;
         border: 2px solid black;
-      }
+    }
+
+    .fullbutton{
+        width: 100%;
+        padding: 20px 20px;
+        background-color: rgb(243, 240, 73);
+        color: rgb(3, 2, 2);
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        border: 2px solid black;
+    }
+
+
 
 </style>
 </head>
@@ -101,22 +114,26 @@ footer {
   <h2>+ Rechner</h2>
 </header>
 -->
-<section>
+<section id="mainsection">
   <nav>
     <ul>
-      <li><input type="text" id="summand1" /></li>
-      <li><input type="button" value="+" onclick="add()" /></li>
-      <li><input type="text" id="summand2" /></li>
-      <li><input type="button" value="=" onclick="add()" /></li>
-      <li><input type="text" id="result" /></li>
+      <li>
+        <div>
+            <input type="text" id="summand1" class = "myslimtext" />
+            <input type="button" value="+" onclick="add()" class="myslimbutton"/>
+            <input type="text" id="summand2" class= "myslimtext" />
+            <input type="button" value="=" onclick="add()" class="myslimbutton" />
+            <input type="text" id="result" class = "myslimtext" />
+        </div>
+    </li>
     </ul>
   </nav>
   
   <article>
     <h1>Optionen</h1>
-    <input type="button" value="Löschen" onclick="myclear()" />
-    <input type="button" value="Aufgabe erstellen" onclick="aufgabeerstellen()" />
-    <input type="button" value="Check" onclick="check()" />
+    <input type="button" value="Löschen" onclick="myclear()" class="fullbutton"/>
+    <input type="button" value="Aufgabe erstellen" onclick="aufgabeerstellen()" class="fullbutton"/>
+    <input type="button" value="Check" onclick="check()" class="fullbutton"/>
   </article>
 </section>
 
@@ -139,6 +156,7 @@ footer {
       document.getElementById("summand1").value=''
       document.getElementById("summand2").value=''
       document.getElementById("erg").value = ''
+      document.body.style.backgroundColor = "#86918b"
     }
     function add() {
       let summand1 = document.getElementById("summand1").value;
@@ -153,6 +171,7 @@ footer {
       document.getElementById("summand2").value = Math.floor(Math.random() * 5)+1;
       document.getElementById("erg").value = ''
       document.getElementById("result").value = ''
+      document.body.style.backgroundColor = "#86918b"
     }
     function check() {
       let summand1 = document.getElementById("summand1").value;
@@ -163,9 +182,11 @@ footer {
       our_result = document.getElementById("result").value
       if (result==our_result){
           document.getElementById("erg").value = 'Toll'
+          document.body.style.backgroundColor ="#09eb42"
       }
       else{
           document.getElementById("erg").value = 'Probier nochmal'
+          document.body.style.backgroundColor = "#eb0909"
       }
     }
 
