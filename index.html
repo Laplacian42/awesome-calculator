@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <head>
+    <title>Rechenaufgaben</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+      }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px; /* only for demonstration, should be removed */
+      }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      /* Clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
+      /* Style the footer */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
 
-    .myslimbutton {
+      .myslimbutton {
         width: 15%;
         padding: 20px 20px;
         background-color: rgb(243, 240, 73);
@@ -77,9 +78,9 @@ footer {
         font-weight: bold;
         border: none;
         border-radius: 25px;
-    }
+      }
 
-    .myslimtext {
+      .myslimtext {
         width: 20%;
         padding: 20px 5px;
         font-size: 24px;
@@ -87,9 +88,9 @@ footer {
         border: none;
         border-radius: 20px;
         border: 2px solid black;
-    }
+      }
 
-    .fullbutton{
+      .fullbutton {
         width: 30%;
         padding: 20px 20px;
         background-color: rgb(243, 240, 73);
@@ -99,98 +100,118 @@ footer {
         border: none;
         border-radius: 20px;
         border: 2px solid black;
-    }
-
-
-
-</style>
-</head>
-<body>
-
-<h2>Plus rechnen üben</h2>
-<p>Hier kann man einfach plus rechnen üben</p>
-<!---
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Plus rechnen üben</h2>
+    <p>Hier kann man einfach plus rechnen üben</p>
+    <!---
 <header>
   <h2>+ Rechner</h2>
 </header>
 -->
-<section id="mainsection">
-  <nav>
-    <ul>
-      <li>
-        <div>
-            <input type="text" id="summand1" class = "myslimtext" />
-            <input type="button" value="+" onclick="add()" class="myslimbutton"/>
-            <input type="text" id="summand2" class= "myslimtext" />
-            <input type="button" value="=" onclick="add()" class="myslimbutton" />
-            <input type="text" id="result" class = "myslimtext" />
-        </div>
-    </li>
-    </ul>
-  </nav>
-  
-  <article>
-    <h1>Optionen</h1>
-    <input type="button" value="Löschen" onclick="myclear()" class="fullbutton"/>
-    <input type="button" value="Aufgabe" onclick="aufgabeerstellen()" class="fullbutton"/>
-    <input type="button" value="Check" onclick="check()" class="fullbutton"/>
-  </article>
-</section>
+    <section id="mainsection">
+      <nav>
+        <ul>
+          <li>
+            <div>
+              <input type="text" id="summand1" class="myslimtext" />
+              <input
+                type="button"
+                value="+"
+                onclick="add()"
+                class="myslimbutton"
+              />
+              <input type="text" id="summand2" class="myslimtext" />
+              <input
+                type="button"
+                value="="
+                onclick="add()"
+                class="myslimbutton"
+              />
+              <input type="text" id="result" class="myslimtext" />
+            </div>
+          </li>
+        </ul>
+      </nav>
 
-<footer>
-    <input type="button" value="-" id="erg" />
-</footer>
-<script>
-    var cal = document.getElementById("calcu");
-    cal.onkeyup = function (event) {
-      if (event.keyCode === 13) {
-        console.log("Enter");
-        let x = document.getElementById("result").value;
-        console.log(x);
-        add();
-      }
-    };
-    function myclear() {
-      console.log("Hallo")
-      document.getElementById("result").value=''
-      document.getElementById("summand1").value=''
-      document.getElementById("summand2").value=''
-      document.getElementById("erg").value = ''
-      document.body.style.backgroundColor = "#86918b"
-    }
-    function add() {
-      let summand1 = document.getElementById("summand1").value;
-      let summand2 = document.getElementById("summand2").value;
-      summand1 = Number(summand1);
-      summand2 = Number(summand2);
-      console.log("S1", summand1, "S2", summand2);
-      document.getElementById("result").value = summand1 + summand2;
-    }
-    function aufgabeerstellen() {
-      document.getElementById("summand1").value = Math.floor(Math.random() * 5)+1;
-      document.getElementById("summand2").value = Math.floor(Math.random() * 5)+1;
-      document.getElementById("erg").value = ''
-      document.getElementById("result").value = ''
-      document.body.style.backgroundColor = "#86918b"
-    }
-    function check() {
-      let summand1 = document.getElementById("summand1").value;
-      let summand2 = document.getElementById("summand2").value;
-      summand1 = Number(summand1);
-      summand2 = Number(summand2);
-      result = summand1 + summand2
-      our_result = document.getElementById("result").value
-      if (result==our_result){
-          document.getElementById("erg").value = 'Toll'
-          document.body.style.backgroundColor ="#09eb42"
-      }
-      else{
-          document.getElementById("erg").value = 'Probier nochmal'
-          document.body.style.backgroundColor = "#eb0909"
-      }
-    }
+      <article>
+        <h1>Optionen</h1>
+        <input
+          type="button"
+          value="Löschen"
+          onclick="myclear()"
+          class="fullbutton"
+        />
+        <input
+          type="button"
+          value="Aufgabe stellen"
+          onclick="aufgabeerstellen()"
+          class="fullbutton"
+        />
+        <input
+          type="button"
+          value="Check"
+          onclick="check()"
+          class="fullbutton"
+        />
+      </article>
+    </section>
 
-
-  </script>
-</body>
+    <footer>
+      <input type="button" value="-" id="erg" />
+    </footer>
+    <script>
+      var cal = document.getElementById("calcu");
+      cal.onkeyup = function (event) {
+        if (event.keyCode === 13) {
+          console.log("Enter");
+          let x = document.getElementById("result").value;
+          console.log(x);
+          add();
+        }
+      };
+      function myclear() {
+        console.log("Hallo");
+        document.getElementById("result").value = "";
+        document.getElementById("summand1").value = "";
+        document.getElementById("summand2").value = "";
+        document.getElementById("erg").value = "";
+        document.body.style.backgroundColor = "#86918b";
+      }
+      function add() {
+        let summand1 = document.getElementById("summand1").value;
+        let summand2 = document.getElementById("summand2").value;
+        summand1 = Number(summand1);
+        summand2 = Number(summand2);
+        console.log("S1", summand1, "S2", summand2);
+        document.getElementById("result").value = summand1 + summand2;
+      }
+      function aufgabeerstellen() {
+        document.getElementById("summand1").value =
+          Math.floor(Math.random() * 9) + 1;
+        document.getElementById("summand2").value =
+          Math.floor(Math.random() * 9) + 1;
+        document.getElementById("erg").value = "";
+        document.getElementById("result").value = "";
+        document.body.style.backgroundColor = "#86918b";
+      }
+      function check() {
+        let summand1 = document.getElementById("summand1").value;
+        let summand2 = document.getElementById("summand2").value;
+        summand1 = Number(summand1);
+        summand2 = Number(summand2);
+        result = summand1 + summand2;
+        our_result = document.getElementById("result").value;
+        if (result == our_result) {
+          document.getElementById("erg").value = "Toll";
+          document.body.style.backgroundColor = "#09eb42";
+        } else {
+          document.getElementById("erg").value = "Probier nochmal";
+          document.body.style.backgroundColor = "#eb0909";
+        }
+      }
+    </script>
+  </body>
 </html>
