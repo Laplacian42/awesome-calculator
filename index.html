@@ -101,6 +101,17 @@
         border-radius: 20px;
         border: 2px solid black;
       }
+      .smallbutton {
+        width: 10%;
+        padding: 20px 20px;
+        background-color: rgb(243, 240, 73);
+        color: rgb(3, 2, 2);
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        border: 2px solid black;
+      }
     </style>
   </head>
   <body>
@@ -155,6 +166,66 @@
           value="Check"
           onclick="check()"
           class="fullbutton"
+        />
+        <input
+          type="button"
+          value="1"
+          onclick="mache_1()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="2"
+          onclick="mache_2()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="3"
+          onclick="mache_3()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="4"
+          onclick="mache_4()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="5"
+          onclick="mache_5()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="6"
+          onclick="mache_6()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="7"
+          onclick="mache_7()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="8"
+          onclick="mache_8()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="9"
+          onclick="mache_9()"
+          class="smallbutton"
+        />
+        <input
+          type="button"
+          value="0"
+          onclick="mache_0()"
+          class="smallbutton"
         />
       </article>
     </section>
@@ -211,6 +282,46 @@
           document.getElementById("erg").value = "Probier nochmal";
           document.body.style.backgroundColor = "#eb0909";
         }
+      }
+      function mache_1() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 1;
+      }
+      function mache_2() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 2;
+      }
+      function mache_3() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 3;
+      }
+      function mache_4() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 4;
+      }
+      function mache_5() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 5;
+      }
+      function mache_6() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 6;
+      }
+      function mache_7() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 7;
+      }
+      function mache_8() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 8;
+      }
+      function mache_9() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 9;
+      }
+      function mache_0() {
+        document.getElementById("result").value =
+          document.getElementById("result").value + 0;
       }
     </script>
   </body>
